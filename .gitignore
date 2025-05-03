@@ -1,0 +1,6 @@
+# Ignore JSON credentials
+*.json
+
+# Python
+__pycache__/
+*.pyc

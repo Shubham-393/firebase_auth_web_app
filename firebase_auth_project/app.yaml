@@ -1,0 +1,9 @@
+runtime: python311  # or 3.10 if you're using that
+entrypoint: gunicorn -b :$PORT main:app
+
+env_variables:
+  GOOGLE_APPLICATION_CREDENTIALS: "firebase_key.json"  # or remove if using default service account
+
+handlers:
+  - url: /.*
+    script: auto
