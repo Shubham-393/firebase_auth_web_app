@@ -1,0 +1,20 @@
+FIREBASE ass STEPS
+
+1)  git clone https://github.com/Shubham-393/firebase_auth_web_app
+
+2) google cloud console -> New Project -> serach datastore ->
+Choose default database -> choose'firestore with Datastore compatibility' -> click create database Button
+
+3) firebase console websit -> Get started with a Firebase project -> Choose 'Add Firebase to Google Cloud project' ->Select our firebase auth project -> continue ->Done
+
+4)On page 'Get started by adding Firebase to your app' -> choose web ( </> icon) -> Next - Next  -> Choose Authentication-> get started -> email/password -> and enable it (simple email ).
+
+5) Project Settings -> Service accounts -> Generate New private Key -> json file will be downloaded -> copy that json file in our project folder -> rename 'firebase_key.json'
+
+
+6) Project Settings -> General -> 4-5 lines containing apikey, authdomain -> copy-paste them into our project's html code.
+
+7) gcloud projects add-iam-policy-binding my-firebase-auth-web-app --member="serviceAccount:firebase-adminsdk-fbsvc@my-firebase-auth-web-app.iam.gserviceaccount.com" --role="roles/datastore.user"
+
+8) Test , Run - python main.py
+
