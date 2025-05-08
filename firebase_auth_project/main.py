@@ -11,7 +11,9 @@ cred = credentials.Certificate("firebase_key.json")
 firebase_admin.initialize_app(cred)
 
 # Google Cloud Datastore client
-datastore_client = datastore.Client()
+
+# datastore_client = datastore.Client()
+datastore_client = datastore.Client.from_service_account_json("firebase_key.json")
 
 @app.route('/')
 def index():
